@@ -1,27 +1,10 @@
 h2{
-    color:var(--light-olive)
+    color:#f67280;
 }
 
 button[type=submit]{
-    background-color: var(--dark-green);
+    background-color: #cd5c5c;
     padding: 5px 10px;
     border: none;
     border-radius: 3px;
 }
-.text-light {
-    background-color: var(--dark-green);
-    color: rgb(220, 20, 20);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .text-end button {
-    background-color: var(--dark-green);
-  }
-  
-  .text-end button:hover {
-    background-color: var(--light-olive);
-  }
