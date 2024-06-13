@@ -1,7 +1,9 @@
 import React from "react";
+
+
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo-1.jpeg";
+import logo from "../../assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { resetState } from "../../redux/slices/userAuthorSlice";
 
@@ -17,7 +19,7 @@ function Header() {
   return (
     <nav
       className="navbar navbar-expand-sm fs-5"
-      style={{ backgroundColor: "var(--light-olive)" }}
+      style={{ backgroundColor: "#7d0552" }}
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
@@ -40,7 +42,7 @@ function Header() {
                   <NavLink
                     className="nav-link"
                     to=""
-                    style={{ color: "red" }}
+                    style={{ color: "white" }}
                   >
                     Home
                   </NavLink>
@@ -49,7 +51,7 @@ function Header() {
                   <NavLink
                     className="nav-link"
                     to="signup"
-                    style={{ color: "red" }}
+                    style={{ color: "white" }}
                   >
                     SignUp
                   </NavLink>
@@ -58,7 +60,7 @@ function Header() {
                   <NavLink
                     className="nav-link"
                     to="signin"
-                    style={{ color: "red" }}
+                    style={{ color: "white" }}
                   >
                     SignIn
                   </NavLink>
@@ -73,8 +75,8 @@ function Header() {
                   style={{ color: "var(--light-grey)" }}
                   onClick={signout}
                 >
-                   <span className="lead  fs-4 me-3 fw-1"  style={{ color: "#994570" ,fontWeight:'bold',fontSize:'1.3rem',textTransform:'capitalize',fontFamily:'fantasy'}}>{currentUser.username}
-                   <sup style={{color:'var(--dark-green)',fontSize:'1rem'}}>({currentUser.userType})</sup>
+                   <span className="lead  fs-4 me-3 fw-1"  style={{ color: "#dfd3e3" ,fontWeight:'bold',fontSize:'1.3rem',textTransform:'capitalize',fontFamily:'fantasy'}}>{currentUser.username}
+                   <sup style={{color:'#dfd3e3',fontSize:'1rem'}}>({currentUser.userType})</sup>
                    </span>
                   Signout
                 </NavLink>
