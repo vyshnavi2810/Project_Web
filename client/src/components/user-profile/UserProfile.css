@@ -1,0 +1,32 @@
+/* General styling for the UserProfile component */
+.nav-link {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: white;
+    background-color: var(--primary-color);
+  }
+  
+  /* Adding styles for active nav-link */
+  .nav-link.active {
+    color: white;
+    background-color: var(--primary-color);
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 576px) {
+    .nav-link {
+      font-size: 1rem;
+      padding: 8px;
+      margin-top: 0.5rem;
+    }
+  }
+  

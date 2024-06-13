@@ -1,0 +1,113 @@
+/* General styles for the entire application */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+
+.header, .footer {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header a, .footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header a:hover, .footer a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for layout components */
+.RootLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Styles for individual pages */
+.Home, .Signup, .Signin, .UserProfile, .AuthorProfile, .Articles, .Article, .ErrorPage {
+  padding: 20px;
+}
+
+.ErrorPage {
+  text-align: center;
+  color: red;
+}
+
+/* Button styling */
+.button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Link styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"], button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  margin: 10px 0;
+}

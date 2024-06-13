@@ -1,0 +1,138 @@
+/* General styling for the Article component */
+.article-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .article-title {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .article-meta {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .article-meta small {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    color: #6c757d;
+  }
+  
+  .article-meta svg {
+    margin-right: 8px;
+  }
+  
+  .article-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .article-content {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    white-space: pre-line;
+  }
+  
+  .comments-section {
+    margin-top: 40px;
+  }
+  
+  .comment {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-header {
+    display: flex;
+    align-items: center;
+    color: dodgerblue;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+  
+  .comment-body {
+    font-family: fantasy;
+    color: lightseagreen;
+    padding-left: 24px;
+  }
+  
+  .comment-form {
+    margin-top: 20px;
+  }
+  
+  .comment-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .comment-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comment-form button svg {
+    margin-left: 8px;
+  }
+  
+  .comment-form button:hover {
+    background-color: #218838;
+  }
+  
+  .edit-article-form {
+    margin-top: 20px;
+  }
+  
+  .edit-article-form .form-label {
+    font-weight: bold;
+  }
+  
+  .edit-article-form .form-control,
+  .edit-article-form .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .edit-article-form .form-control:focus,
+  .edit-article-form .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .edit-article-form .text-end {
+    text-align: right;
+  }
+  
+  .edit-article-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-article-form button:hover {
+    background-color: #0056b3;
+  }
+  
