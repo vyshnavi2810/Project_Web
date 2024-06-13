@@ -1,32 +1,28 @@
 import "./Signup.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { useState } from "react";
 
 function Signup() {
-  const {
+  let {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [err, setErr] = useState("");
-  const [state, setState] = useState(false);
-  const [signupSuccess, setSignupSuccess] = useState(false);
+  let [err, setErr] = useState("");
+  let [state, setState] = useState(false);
+  let [signupSuccess, setSignupSuccess] = useState(false);
 
   async function onSignUpFormSubmit(userObj) {
-    try {
-      const res = await axios.post("http://localhost:4000/user-api/user", userObj);
-      console.log(res);
-      if (res.status === 201) {
-        setState(true);
-        setSignupSuccess(true);
-        setErr("");
-      } else {
-        setErr(res.data.message);
-      }
-    } catch (error) {
-      setErr("Registration failed. Please try again.");
+    let res = await axios.post("http://localhost:4000/author-api/user", userObj);
+    console.log(res);
+    if (res.status === 201) {
+      setState(true);
+      setSignupSuccess(true);
+      setErr("");
+    } else {
+      setErr(res.data.message);
     }
   }
 
@@ -36,7 +32,7 @@ function Signup() {
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card shadow">
             <div className="card-title text-center border-bottom">
-              {signupSuccess ? (
+              {signupSuccess === true ? (
                 <div>
                   <p className="lead fs-3 text-center display-4 text-success">
                     User registration success
@@ -53,7 +49,9 @@ function Signup() {
               )}
             </div>
             <div className="card-body">
-              {err && <p className="lead text-center text-danger">{err}</p>}
+              {err.length !== 0 && (
+                <p className="lead text-center text-danger">{err}</p>
+              )}
 
               <form onSubmit={handleSubmit(onSignUpFormSubmit)}>
                 {/* radio */}
@@ -61,7 +59,10 @@ function Signup() {
                   <label
                     htmlFor="user"
                     className="form-check-label me-3"
-                    style={{ fontSize: "1.2rem", color: "var(--light-dark-grey)" }}
+                    style={{
+                      fontSize: "1.2rem",
+                      color: "#7d0552",
+                    }}
                   >
                     Register as
                   </label>
@@ -71,13 +72,12 @@ function Signup() {
                       className="form-check-input"
                       id="author"
                       value="author"
-                      {...register("userType", { required: true })}
-                      disabled={state}
+                      {...register("userType", { disabled: state })}
                     />
                     <label
                       htmlFor="author"
                       className="form-check-label"
-                      style={{ color: "var(--crimson)" }}
+                      style={{ color: "#c12267" }}
                     >
                       Author
                     </label>
@@ -88,20 +88,16 @@ function Signup() {
                       className="form-check-input"
                       id="user"
                       value="user"
-                      {...register("userType", { required: true })}
-                      disabled={state}
+                      {...register("userType", { disabled: state })}
                     />
                     <label
                       htmlFor="user"
                       className="form-check-label"
-                      style={{ color: "var(--crimson)" }}
+                      style={{ color: "#c12267" }}
                     >
                       User
                     </label>
                   </div>
-                  {errors.userType && (
-                    <p className="text-danger">User type is required</p>
-                  )}
                 </div>
                 <div className="mb-4">
                   <label htmlFor="username" className="form-label">
@@ -111,12 +107,8 @@ function Signup() {
                     type="text"
                     className="form-control"
                     id="username"
-                    {...register("username", { required: true })}
-                    disabled={state}
+                    {...register("username", { disabled: state })}
                   />
-                  {errors.username && (
-                    <p className="text-danger">Username is required</p>
-                  )}
                 </div>
                 <div className="mb-4">
                   <label htmlFor="password" className="form-label">
@@ -126,12 +118,8 @@ function Signup() {
                     type="password"
                     className="form-control"
                     id="password"
-                    {...register("password", { required: true })}
-                    disabled={state}
+                    {...register("password", { disabled: state })}
                   />
-                  {errors.password && (
-                    <p className="text-danger">Password is required</p>
-                  )}
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="form-label">
@@ -141,16 +129,12 @@ function Signup() {
                     type="email"
                     className="form-control"
                     id="email"
-                    {...register("email", { required: true })}
-                    disabled={state}
+                    {...register("email", { disabled: state })}
                   />
-                  {errors.email && (
-                    <p className="text-danger">Email is required</p>
-                  )}
                 </div>
 
                 <div className="text-end">
-                  <button type="submit" style={{ backgroundColor: 'red', color: 'white' }}>
+                  <button type="submit" className="text-light" disabled={state}>
                     Register
                   </button>
                 </div>
@@ -164,4 +148,3 @@ function Signup() {
 }
 
 export default Signup;
-
