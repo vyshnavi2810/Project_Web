@@ -54,10 +54,10 @@ function Signin() {
                     className="form-check-label me-3"
                     style={{
                       fontSize: "1.2rem",
-                      color: "var(--light-dark-grey)",
+                      color: "#7d0552",
                     }}
                   >
-                    Login 
+                    Login as
                   </label>
                   <div className="form-check form-check-inline">
                     <input
@@ -67,9 +67,9 @@ function Signin() {
                       value="author"
                       {...register("userType")}
                     />
-                    {/* <label htmlFor="author" className="form-check-label">
+                    <label htmlFor="author" className="form-check-label" style={{ color: "#c12267" }}>
                       Author
-                    </label> */}
+                    </label>
                   </div>
                   <div className="form-check form-check-inline">
                     <input
@@ -79,9 +79,9 @@ function Signin() {
                       value="user"
                       {...register("userType")}
                     />
-                    {/* <label htmlFor="user" className="form-check-label">
+                    <label htmlFor="user" className="form-check-label" style={{ color: "#c12267" }}>
                       User
-                    </label> */}
+                    </label>
                   </div>
                 </div>
                 <div className="mb-4">
@@ -108,7 +108,7 @@ function Signin() {
                 </div>
 
                 <div className="text-end">
-                  <button type="submit" style={{ backgroundColor: 'red', color: 'white' }}>
+                  <button type="submit" className="text-light">
                     Login
                   </button>
                 </div>
