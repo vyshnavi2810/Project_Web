@@ -145,38 +145,37 @@ function Article() {
           <div>
             {/* read existing comments */}
             <div className="comments my-4">
-            {state.comments && state.comments.length === 0 ? (
-  <p className="display-3">No comments yet...</p>
-) : (
-  state.comments && state.comments.map((commentObj, ind) => {
-    return (
-      <div key={ind} className="bg-light  p-3">
-        <p
-          className="fs-4"
-          style={{
-            color: "dodgerblue",
-            textTransform: "capitalize",
-          }}
-        >
-          <FcPortraitMode className="fs-2 me-2" />
-          {commentObj.username}
-        </p>
+              {state.comments.length === 0 ? (
+                <p className="display-3">No comments yet...</p>
+              ) : (
+                state.comments.map((commentObj, ind) => {
+                  return (
+                    <div key={ind} className="bg-light  p-3">
+                      <p
+                        className="fs-4"
+                        style={{
+                          color: "dodgerblue",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        <FcPortraitMode className="fs-2 me-2" />
+                        {commentObj.username}
+                      </p>
 
-        <p
-          style={{
-            fontFamily: "fantasy",
-            color: "lightseagreen",
-          }}
-          className="ps-4"
-        >
-          <FcComments className="me-2" />
-          {commentObj.comment}
-        </p>
-      </div>
-    );
-  })
-)}
-
+                      <p
+                        style={{
+                          fontFamily: "fantasy",
+                          color: "lightseagreen",
+                        }}
+                        className="ps-4"
+                      >
+                        <FcComments className="me-2" />
+                        {commentObj.comment}
+                      </p>
+                    </div>
+                  );
+                })
+              )}
             </div>
 
             <h1>{comment}</h1>
