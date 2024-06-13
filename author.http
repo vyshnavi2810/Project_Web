@@ -5,9 +5,9 @@ Content-Type: application/json
 
 {
     "userType":"author",
-    "username":"vikas",
-    "password":"vikas",
-    "email":"vikas@mail.com"
+    "username":"bhavs",
+    "password":"bhavs",
+    "email":"bhavs@mail.com"
 }
 
 
@@ -18,20 +18,21 @@ Content-Type: application/json
 
 {
     "userType":"author",
-    "username":"vikas",
-    "password":"vikas"   
+    "username":"bhavs",
+    "password":"bhavs"   
 }
 
 ###write article
 post http://localhost:4000/author-api/article
 Content-Type: application/json
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwiaWF0IjoxNzE4MTg1MDA5LCJleHAiOjE3MTgyNzE0MDl9.AlG2k1dHm6QjUvqev0DWQPTHaMtbwJXIsyTFVzfcekk
+
 
 {
-    "username":"vikas",
-    "articleId":"1",
+    "username":"bhavs",
     "title":"JavaScript vs ECMAScript",
-    "dateOfModification":"{{$datetime iso8601}}"
+    "body":"some content",
+    "published":"{{$datetime iso8601}}",
+    "updated":"{{$datetime iso8601}}" 
 }
 
 
@@ -65,7 +66,7 @@ Content-Type: application/json
    "content":"JavaScript is a high-level programming language that follows the ECMAScript standard. It was originally designed as a scripting language for websites but became widely adopted as a general-purpose programming language, and is currently the most popular programming language in use.[1] JavaScript is usually found running in a web browser as interactive or automated content, ranging from popup messages and live clocks to large web applications. JavaScript is also commonly used in server-side programming through platforms",
    "dateOfCreation":"2024-02-26T13:56:22.487Z",
    "dateOfModification":"{{$datetime iso8601}}",
-   "username":"vikas",
+   "username":"bhavs",
    "comments": [ ],
    "status":true
    
